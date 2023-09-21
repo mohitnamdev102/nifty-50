@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nifty50</title>
+</head>
+<body>
+
+<center> <br><br><br><br>
+  <h1>Nifty - 50 stock price prediction</h1>
+  <form action="/" method="post">
+    
+    <table>
+
+          <tr>
+            <td><label for="name">Stock Name :</label></td>
+            <td>
+                <select id="name" name="a">
+                    <option value=""> {{ stock_name_list[0] }} </option>
+                    <option value=""> {{ stock_name_list[1] }} </option>
+                    <option value=""> {{ stock_name_list[2] }} </option>    
+                    <option value=""> {{ stock_name_list[3] }} </option>
+                    <option value=""> {{ stock_name_list[4] }} </option>
+                    <option value=""> {{ stock_name_list[5] }} </option> 
+                    <option value=""> {{ stock_name_list[6] }} </option>
+                    <option value=""> {{ stock_name_list[7] }} </option>
+                    <option value=""> {{ stock_name_list[8] }} </option> 
+                    <option value=""> {{ stock_name_list[9] }} </option> 
+                    <option value=""> {{ stock_name_list[10] }} </option> 
+                    <option value=""> {{ stock_name_list[11] }} </option>
+                    <option value=""> {{ stock_name_list[12] }} </option>    
+                    <option value=""> {{ stock_name_list[13] }} </option>
+                    <option value=""> {{ stock_name_list[14] }} </option>
+                    <option value=""> {{ stock_name_list[15] }} </option> 
+                    <option value=""> {{ stock_name_list[16] }} </option>
+                    <option value=""> {{ stock_name_list[17] }} </option>
+                    <option value=""> {{ stock_name_list[18] }} </option> 
+                    <option value=""> {{ stock_name_list[19] }} </option>
+                    <option value=""> {{ stock_name_list[20] }} </option>
+                    <option value=""> {{ stock_name_list[21] }} </option>
+                    <option value=""> {{ stock_name_list[22] }} </option>    
+                    <option value=""> {{ stock_name_list[23] }} </option>
+                    <option value=""> {{ stock_name_list[24] }} </option>
+                    <option value=""> {{ stock_name_list[25] }} </option> 
+                    <option value=""> {{ stock_name_list[26] }} </option>
+                    <option value=""> {{ stock_name_list[27] }} </option>
+                    <option value=""> {{ stock_name_list[28] }} </option> 
+                    <option value=""> {{ stock_name_list[29] }} </option>
+                    <option value=""> {{ stock_name_list[30] }} </option> 
+                    <option value=""> {{ stock_name_list[31] }} </option>
+                    <option value=""> {{ stock_name_list[32] }} </option>    
+                    <option value=""> {{ stock_name_list[33] }} </option>
+                    <option value=""> {{ stock_name_list[34] }} </option>
+                    <option value=""> {{ stock_name_list[35] }} </option> 
+                    <option value=""> {{ stock_name_list[36] }} </option>
+                    <option value=""> {{ stock_name_list[37] }} </option>
+                    <option value=""> {{ stock_name_list[38] }} </option> 
+                    <option value=""> {{ stock_name_list[39] }} </option>
+                    <option value=""> {{ stock_name_list[40] }} </option>
+                    <option value=""> {{ stock_name_list[41] }} </option>
+                    <option value=""> {{ stock_name_list[42] }} </option>    
+                    <option value=""> {{ stock_name_list[43] }} </option>
+                    <option value=""> {{ stock_name_list[44] }} </option>
+                    <option value=""> {{ stock_name_list[45] }} </option> 
+                    <option value=""> {{ stock_name_list[46] }} </option>
+                    <option value=""> {{ stock_name_list[47] }} </option>
+                    <option value=""> {{ stock_name_list[48] }} </option> 
+                    <option value=""> {{ stock_name_list[49] }} </option>
+
+
+                </select>
+           </td>
+          </tr>
+
+          <tr>
+            <td>Total Quantity :</td>
+            <td><input type="number" step="0.01" name="b" placeholder="Number like 325596.0" required></td>
+
+          </tr>
+
+          <tr>
+            <td>Opening Stock :</td>
+            <td><input type="number" step="0.01" name="c" placeholder="Number like 1740.65" required></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><input type="submit" value="Predict"></td>
+          </tr>
+
+          <td><h4>Predictions -</h4></td>
+
+          {% if closing_stock is defined %}
+          <tr>
+            <td>Closing Stock :</td><td>{{closing_stock}}</td> 
+          </tr>
+          {% endif %}
+
+          {% if PandL is defined %}
+          <tr>
+            <td>P&L :</td><td>{{PandL}}</td> 
+          </tr>
+          {% endif %}
+
+    </table>
+
+  </form>
+</center>
+
+</body>
+</html>
